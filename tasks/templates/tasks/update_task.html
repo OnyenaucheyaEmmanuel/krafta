@@ -1,0 +1,28 @@
+<h1>Update task</h1>
+<style>
+  form {
+    padding: 20px;
+    box-shadow: 6px 2px 30px 0px rgba(0, 0, 0, 0.75);
+    box-sizing: border-box;
+    background-color: #b2f0c1;
+    font-size: 15px;
+  }
+
+  body {
+    background-color: #b2f0c1;
+  }
+  h1 {
+    text-align: center;
+    color: #fb5607;
+    font-size: 80px;
+    text-shadow: -10px 0 black, 0 10px black, 10px 0 black, 0 -10px black;
+  }
+</style>
+<body>
+  <form method="POST" action="">
+    {% csrf_token %} <br />
+    {{ form }} <br />
+    <br />
+    <input type="submit" name="Update Task" /> <br />
+  </form>
+</body>

@@ -1,0 +1,35 @@
+<style>
+  form {
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #b2f0c1;
+    font-size: 15px;
+  }
+
+  body {
+    background-color: #b2f0c1;
+  }
+  h1 {
+    text-align: center;
+    color: #fb5607;
+    font-size: 50px;
+    text-shadow: -10px 0 black, 0 10px black, 10px 0 black, 0 -10px black;
+  }
+  div {
+    /* padding-top: 20px; */
+    box-shadow: 6px 2px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+</style>
+
+<body>
+  <h1>Delete Item</h1>
+
+  <div>
+    <h2>Are you sure you want to delete "{{ item }}"?</h2>
+    <a href="{% url 'list' %}">Cancel</a>
+    <form method="POST" action="">
+      {% csrf_token %}
+      <input type="submit" name="confirm" />
+    </form>
+  </div>
+</body>
